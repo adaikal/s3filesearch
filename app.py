@@ -11,7 +11,7 @@ search_string = '^.*'+findfile+'.*$'
 
 for bucket in response['Buckets']:
     bucket_name = bucket["Name"]
-    found_buckets = re.findall("^.*cust.*$",bucket_name, re.IGNORECASE)
+    found_buckets = re.findall("^.*$",bucket_name, re.IGNORECASE)
     if found_buckets:
         print(f'Found Bucket:  {found_buckets}')
         for found_bucket in found_buckets:
